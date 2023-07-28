@@ -1,0 +1,153 @@
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#2b1055, #7597de);
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: none;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 6px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #dff6ff;
+  }
+
+.navbar{
+    position: fixed;
+    top: 0;
+    margin-top: 25px;
+    width: 750px;
+    height: 5rem;
+    border-radius: 40px;
+    background-color: transparent;
+    z-index: 999;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navbar-item{
+    color: rgba(230, 230, 250, 0.734);
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    font-family: "Times New Roman", Times, serif;
+    cursor: pointer;
+    transition: transform, 5s, ease-in-out, 0.3s;
+}
+
+.navbar-item:hover{
+    letter-spacing: 5px;
+    color: lavender;
+    text-shadow: 0 0 10px lavender;
+}
+
+.container {
+    width: 100%;
+    scroll-snap-type: y mandatory;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+.sections{
+    scroll-snap-align: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.title{
+    font-size: 75px;
+    font-weight: bold;
+    letter-spacing: 20px;
+    color: lavender;
+    text-shadow: 0 0 25px lavender;
+    transition: transform, 0s, ease-in-out, 0.3s;
+}
+
+.title:hover{
+    color: rgba(230, 230, 250, 0.734)r;
+    text-shadow: 0 0 25px rgba(230, 230, 250, 0.734);
+}
+
+.descriptions{
+    width: 750px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 5px;
+}
+
+.description{
+    color: rgba(230, 230, 250, 0.734);
+    text-shadow: 0 0 15px rgba(230, 230, 250, 0.734);
+    font-size: 25px;
+}
+
+.icons svg{
+    width: 40px;
+    height: 40px;
+    fill: rgba(230, 230, 250, 0.734);
+    margin-top: 50px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: transform, 5s, ease-in-out, 0.3s;
+}
+
+.icons svg:hover{
+    width: 55px;
+    height: 45px;
+    fill: lavender;
+    filter: drop-shadow(0 0 10px rgba(230, 230, 250, 0.5));
+}
+
+.icons .github{
+    margin-right: 15px;
+}
+
+.icons .discord{
+    margin-left: 15px;
+}
+
+.homesection{
+    flex-direction: column;
+    background-image: url(images/stars.png);
+    background-size: cover;
+}
+
+.projectssection{
+    flex-direction: column;
+}
+
+.contactsection{
+    flex-direction: column;
+    background-image: url(images/mountains_front.png);
+    background-size: cover;
+}
+
+.fadeIn{
+    animation: 0.5s fadeIn forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeIn{
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
