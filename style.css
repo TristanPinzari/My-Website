@@ -26,8 +26,7 @@ body{
 
 .navbar{
     position: fixed;
-    top: 0;
-    margin-top: 25px;
+    top: 4%;
     width: 750px;
     height: 5rem;
     border-radius: 40px;
@@ -35,6 +34,7 @@ body{
     z-index: 999;
     display: flex;
     justify-content: space-evenly;
+    transition: transform, 5s, ease-in-out, 1s;
 }
 
 .navbar-item{
@@ -134,6 +134,203 @@ body{
     flex-direction: column;
 }
 
+.projects{
+    margin-top: 145px;
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 20px;
+    color: lavender;
+    text-shadow: 0 0 25px lavender;
+    transition: transform, 0s, ease-in-out, 0.3s;
+}
+
+.projectswrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80%;
+    height: 50%;
+    background-color: transparent;
+}
+
+.project{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    width: 30%;
+    height: 80%;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+}
+
+.resume{
+    position: relative; /* Ensure the parent element has a non-static position */
+    flex-direction: column;
+    background-image: url('images/resumeparser.png');
+    background-position: center center;
+    background-size: cover;
+  }
+  
+  .resume::before {
+    border-radius: 20px;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/resumeparser.png');
+    background-position: center center;
+    background-size: cover;
+    filter: brightness(0.7) blur(1px);
+    z-index: -1; /* Place the pseudo-element behind the content */
+  }
+  
+  .twitter {
+    position: relative; /* Ensure the parent element has a non-static position */
+    flex-direction: column;
+    background-image: url('images/twitter.jpg');
+    background-position: center center;
+    background-size: cover;
+  }
+  
+  .twitter::before {
+    border-radius: 20px;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/twitter.jpg');
+    background-position: center center;
+    background-size: cover;
+    filter: brightness(0.7) blur(1px);
+    z-index: -1; /* Place the pseudo-element behind the content */
+  }
+  
+  .weather {
+    position: relative; /* Ensure the parent element has a non-static position */
+    flex-direction: column;
+    background-image: url('images/weatheragg.png');
+    background-position: center center;
+    background-size: cover;
+  }
+  
+  .weather::before {
+    border-radius: 20px;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/weatheragg.png');
+    background-position: center center;
+    background-size: cover;
+    filter: brightness(0.7) blur(1px);
+    z-index: -1; /* Place the pseudo-element behind the content */
+  }
+
+.projectnames{
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    font-family: "Times New Roman", Times, serif;
+    cursor: pointer;
+    transition: transform, 5s, ease-in-out, 0.3s;
+}
+
+.projectnames:hover{
+    letter-spacing: 5px;
+    color: lavender;
+    text-shadow: 0 0 10px lavender;
+}
+
+.backgroundblur{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    opacity: 0.75;
+    background-color: black;
+    z-index: 999;
+}
+
+.projectoverlay{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 62%;
+    border-radius: 20px;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background: linear-gradient(90deg, #2b1055, #7597de);
+    z-index: 999;
+}
+
+.sharebuttons{
+    position: fixed;
+    top: 26px;
+    right: 7%;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.exitbuttons{
+    position: fixed;
+    top: 3%;
+    right: 2%;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.projectdesc{
+    height: 80%;
+    width: 30%;
+    color: lavender;
+}
+
+.projecttitle{
+    font-size: 40px;
+}
+
+.paragraph{
+    font-size: 20px;
+}
+
+.madewith{
+    font-size: 20px;
+}
+
+.learnmoredesc{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.learnmoredesc svg{
+    fill: lavender;
+    filter: drop-shadow(0 0 10px rgba(230, 230, 250, 0.5));
+    margin-left: 5px;
+}
+
+.learnmore{
+    color: rgba(230, 230, 250, 0.734);
+    margin-right: 5px;
+}
+  
 .contactsection{
     flex-direction: column;
     background-image: url(images/mountains_front.png);
